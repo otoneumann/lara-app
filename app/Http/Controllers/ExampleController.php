@@ -11,13 +11,13 @@ class ExampleController extends Controller
         $ourName = 'oto';
         $animals = ['AAA','BBB','CCC','DDD'];
 
-        return view('homepage', ['surname'=> 'ELdara', 'name' => $ourName, 'catname' => 'Mewsalot', 'animals' => $animals]);
+        return view('homepage', ['surname'=> 'Tester', 'name' => $ourName, 'catname' => 'Mewsalot', 'animals' => $animals]);
                
     }
     public function about(){
-        return '<h1>About Page!!</h1><a href="/">Back to home</a>';        
+        return view('single-post');        
     }
     public function aboutyou(){
-        return '<h1>Testing</h1><a href="/">Back to home</a><br><a href="/about">view the about page</a>';       
+        return view('aboutyou',['test'=>'<h1>Testing</h1><a href="/">Back to home</a><br><a href="/about">view the about page</a>']);       
     }
 }
